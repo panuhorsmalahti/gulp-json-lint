@@ -22,7 +22,7 @@ gulp.task('jsonlint', function(){
 ```
 
 
-The output is added to file.jsonlint
+The output is added to file.jsonlint.
 You can output the errors by using reporters.
 There are two default reporters:
 * 'json' prints stringified JSON to console.log.
