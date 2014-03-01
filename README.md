@@ -1,8 +1,6 @@
 gulp-jsonlint
 =========
 
-Note: This is work in progress.
-
 JSON linter plugin for Gulp.
 
 
