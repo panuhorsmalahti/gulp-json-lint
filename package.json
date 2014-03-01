@@ -28,7 +28,7 @@
   "dependencies": {
     "map-stream": "~0.1.0",
     "gulp-util": "~2.2.14",
-    "json-lint": "~0.1.1"
+    "json-lint": "~0.1.0"
   },
   "analyze": true,
   "devDependencies": {},

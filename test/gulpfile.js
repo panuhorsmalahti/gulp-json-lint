@@ -13,6 +13,22 @@ gulp.task('valid', function(){
         .pipe(jsonlint.report('verbose'));
 });
 
+gulp.task('comments-valid', function(){
+      gulp.src('comments.json')
+        .pipe(jsonlint({
+          comments: true
+        }))
+        .pipe(jsonlint.report('verbose'));
+});
+
+gulp.task('comments-invalid', function(){
+      gulp.src('comments.json')
+        .pipe(jsonlint({
+          comments: false
+        }))
+        .pipe(jsonlint.report('verbose'));
+});
+
 gulp.task('invalid', function(){
       gulp.src('invalid.json')
         .pipe(jsonlint())
@@ -20,3 +36,12 @@ gulp.task('invalid', function(){
         .pipe(jsonlint.report('verbose'));
 });
 
+var testReporter = function (lint, file) {
+    console.log(file.path + ': ' + lint.error);
+};
+
+gulp.task('invalid-custom', function(){
+      gulp.src('invalid.json')
+        .pipe(jsonlint())
+        .pipe(jsonlint.report(testReporter));
+});

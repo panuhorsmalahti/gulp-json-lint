@@ -24,27 +24,43 @@ gulp.task('jsonlint', function(){
 ```
 
 
-The output (stringified JSON) is added to file.jsonlint
+The output is added to file.jsonlint
 You can output the errors by using reporters.
 There are two default reporters:
 * 'json' prints stringified JSON to console.log.
 * 'verbose' prints longer human-readable failures to console.log.
 
-Reporters are executed only if there is at least one failure.
+Reporters are executed only if there is an error.
 
 You can use your own reporter by supplying a function.
 ```javascript
 /* Output is in the following form:
- * [{ }]
+ * {
+ *   "error": "Unknown Character 'a', expecting a string for key statement.",
+ *   "line": 2,
+ *   "character": 5
+ * }
  */
+var testReporter = function (lint, file) {
+    console.log(file.path + ': ' + lint.error);
+};
 
-gulp.task('invalid-custom', function(){
-      gulp.src('invalid.ts')
-        .pipe(tslint())
-        .pipe(tslint.report(testReporter));
+gulp.task('invalid', function(){
+      gulp.src('invalid.json')
+        .pipe(jsonlint())
+        .pipe(jsonlint.report(testReporter));
 });
 ```
 
+gulp-jsonlint only has one option, which specifies if comments are allowed. By default, they're not.
+```javascript
+gulp.task('comments-valid', function(){
+      gulp.src('comments.json')
+        .pipe(jsonlint({
+          comments: true
+        }))
+        .pipe(jsonlint.report('verbose'));
+});
 ```
 
 Development

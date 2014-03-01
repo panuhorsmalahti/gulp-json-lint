@@ -1,0 +1,3 @@
+node_modules
+test/invalid.json
+test/valid.json

@@ -11,6 +11,11 @@ var map = require('map-stream');
 
 "use strict";
 
+// Helper function
+function isFunction(f) {
+    return Object.prototype.toString.call(f) === '[object Function]';
+}
+
 /*
  * Define default reporters
  */
@@ -18,7 +23,7 @@ var jsonReporter = function (lint) {
     console.log(JSON.stringify(lint));
 };
 
-var verboseReporter = function (lint) {
+var verboseReporter = function (lint, file) {
     console.log('(' + lint.error + ') ' + file.path
         + '[' + lint.line + ', ' + lint.character + ']');
 };
@@ -40,11 +45,16 @@ var jsonlintPlugin = function(pluginOptions) {
     }
 
     return map(function(file, cb) {
-        file.jsonlint = jsonlint(file.contents.toString('utf8'), pluginOptions);
+        var result = jsonlint(file.contents.toString('utf8'), pluginOptions);
+        file.jsonlint = {
+            error: result.error,
+            line: result.line,
+            character: result.character
+        };
 
         // Pass file
         cb(null, file);
-    };
+    });
 };
 
 jsonlintPlugin.report = function (reporter) {
