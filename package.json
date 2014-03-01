@@ -1,5 +1,5 @@
 {
-  "name": "gulp-jsonlint",
+  "name": "gulp-json-lint",
   "preferGlobal": false,
   "version": "0.0.1",
   "author": "Panu Horsmalahti <panu.horsmalahti@iki.fi>",
@@ -13,7 +13,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panuhorsmalahti/gulp-jsonlint.git"
+    "url": "https://github.com/panuhorsmalahti/gulp-json-lint.git"
   },
   "keywords": [
     "gulp",

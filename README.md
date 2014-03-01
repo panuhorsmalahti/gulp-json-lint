@@ -1,18 +1,18 @@
-gulp-jsonlint
+gulp-json-lint
 =========
 
 JSON linter plugin for Gulp.
 
 
-First install gulp-jsonlint
+First install gulp-json-lint
 ```shell
-npm install --save-dev gulp-jsonlint
+npm install --save-dev gulp-json-lint
 ```
 
 
 Usage:
 ```javascript
-var jsonlint = require('gulp-jsonlint');
+var jsonlint = require('gulp-json-lint');
 
 gulp.task('jsonlint', function(){
       gulp.src('source.json')
@@ -50,7 +50,7 @@ gulp.task('invalid', function(){
 });
 ```
 
-gulp-jsonlint only has one option, which specifies if comments are allowed. By default, they're not.
+gulp-json-lint only has one option, which specifies if comments are allowed. By default, they're not.
 ```javascript
 gulp.task('comments-valid', function(){
       gulp.src('comments.json')
