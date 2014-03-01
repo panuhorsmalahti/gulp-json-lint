@@ -1,0 +1,39 @@
+{
+  "name": "gulp-jsonlint",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "Panu Horsmalahti <panu.horsmalahti@iki.fi>",
+  "description": "JSON linter Gulp plugin",
+  "contributors": [
+    {
+      "name": "Panu Horsmalahti",
+      "email": "panu.horsmalahti@iki.fi"
+    }
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panuhorsmalahti/gulp-jsonlint.git"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "gulpplugin",
+    "gulpfriendly",
+    "linter",
+    "lint",
+    "json-lint",
+    "jsonlint"
+  ],
+  "dependencies": {
+    "map-stream": "~0.1.0",
+    "gulp-util": "~2.2.14",
+    "json-lint": "~0.1.1"
+  },
+  "analyze": true,
+  "devDependencies": {},
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
