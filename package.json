@@ -1,7 +1,7 @@
 {
   "name": "gulp-json-lint",
   "preferGlobal": false,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Panu Horsmalahti <panu.horsmalahti@iki.fi>",
   "description": "JSON linter Gulp plugin",
   "contributors": [
@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "map-stream": "~0.1.0",
-    "gulp-util": "~2.2.14",
+    "gulp-util": "~3.0.3",
     "json-lint": "~0.1.0"
   },
   "analyze": true,
