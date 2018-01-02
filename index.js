@@ -5,8 +5,7 @@
 var jsonlint = require( 'json-lint' );
 
 // Gulp
-var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
 var map = require('map-stream');
 
 "use strict";

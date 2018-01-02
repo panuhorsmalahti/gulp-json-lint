@@ -26,9 +26,9 @@
     "jsonlint"
   ],
   "dependencies": {
+    "json-lint": "~0.1.0",
     "map-stream": "~0.1.0",
-    "gulp-util": "~3.0.3",
-    "json-lint": "~0.1.0"
+    "plugin-error": "^0.1.2"
   },
   "analyze": true,
   "devDependencies": {},
