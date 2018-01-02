@@ -1,6 +1,5 @@
 // Simple Gulpfile
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 
 // Gulp plugins
 var jsonlint = require('../index');
